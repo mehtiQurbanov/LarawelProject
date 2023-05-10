@@ -42,5 +42,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::get('/setLanguage/{lang}', [LanguageController::class, 'setLanguage'])->name("lang");
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route ::apiResource('name',UserController::class)->only(['show','store','update','destroy']);
 
